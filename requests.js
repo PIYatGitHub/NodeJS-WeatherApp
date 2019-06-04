@@ -28,11 +28,11 @@ const forecast = (data, cb) =>{
     lat:  data.latitude,
     params:'units=si'
   },
-    dark_sky = `${d_sky_config.baseUrl}/${d_sky_config.key}/${d_sky_config.lat},${d_sky_config.long}?${d_sky_config.params}`;
+  dark_sky = `${d_sky_config.baseUrl}/${d_sky_config.key}/${d_sky_config.lat},${d_sky_config.long}?${d_sky_config.params}`;
   request({url:dark_sky, json:true},(err, res)=>{
   if       (err)            cb('unable to connect to the weather service...', undefined);
   else if  (res.body.error) cb('apparently you did enter the wrong thing..., please check your input carefully', undefined);
-  else                      cb(undefined, `${res.body.daily.data[0].summary} It is currently ${res.body.currently.temperature} degrees outside with ${res.body.currently.precipProbability}% chances of rain.`);
+  else                      cb(undefined, `${res.body.daily.data[0].summary} It is currently ${res.body.currently.temperature} degrees outside with wind @ ${res.body.currently.windSpeed}km/h.`);
 });
 
 };
