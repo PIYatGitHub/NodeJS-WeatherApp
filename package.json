@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/PIYatGitHub/NodeJS-WeatherApp/issues"
   },
-  "homepage": "https://github.com/PIYatGitHub/NodeJS-WeatherApp#readme"
+  "homepage": "https://github.com/PIYatGitHub/NodeJS-WeatherApp#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
