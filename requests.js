@@ -1,4 +1,5 @@
 const request = require('request');
+
 const geocode = (address, cb) => {
   const g_coding_config = {
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places',
@@ -19,6 +20,24 @@ const geocode = (address, cb) => {
 
 };
 
+const forecast = (data, cb) =>{
+  const d_sky_config = {
+    baseUrl: 'https://api.darksky.net/forecast',
+    key: '3a5eff48956d3831f67dab05b8fda0d7',
+    long: data.longitude,
+    lat:  data.latitude,
+    params:''
+  },
+    dark_sky = `${d_sky_config.baseUrl}/${d_sky_config.key}/${d_sky_config.lat},${d_sky_config.long}?${d_sky_config.params}`;
+  request({url:dark_sky, json:true},(err, res)=>{
+  if       (err)            cb('unable to connect to the weather service...', undefined);
+  else if  (res.body.error) cb('apparently you did enter the wrong thing..., please check your input carefully', undefined);
+  else                      cb(undefined, res.body.currently);
+});
+
+};
+
 module.exports = {
-  geocode:  geocode
+  geocode,
+  forecast
 };
