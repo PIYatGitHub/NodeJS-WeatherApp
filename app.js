@@ -30,7 +30,13 @@ const geocode = (address, cb) => {
   request({url:geo_coding, json:true},(err, res)=>{
     if       (err)                       cb('Unable to connect to the location service...', undefined);
     else if  (!res.body.features.length) cb('apparently you did enter the wrong thing..., please check your input carefully', undefined);
-    else                                 cb(undefined, {latitude: res.body.features[0].center[0], longitude: res.body.features[0].center[1]});
+    else{
+      cb(undefined,
+        {latitude:    res.body.features[0].center[0],
+          longitude:  res.body.features[0].center[1],
+          location:   res.body.features[0].place_name
+        });
+    }
   });
 
 };
