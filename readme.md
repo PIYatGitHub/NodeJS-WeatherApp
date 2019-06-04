@@ -1,0 +1,3 @@
+## The weather app
+This app uses async web requests to get your data and show it to you via the browser. 
+It will provide the simplest of UI so that you don't get confused... 
