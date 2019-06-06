@@ -35,16 +35,17 @@ app.get('/help', (req, res)=>{
 
 app.get('/weather', (req, res)=>{
   if(!req.query.address){
-    return res.send({
-      error: 'No address provided!'
-    });
+    return res.send({error: 'No address provided!'});
   }
-requests.geocode(req.query.address, (err, geolocation)=>{
-  requests.forecast(geolocation, (err, forecast)=>{
-    if (err) return res.send(err);
-    res.send(forecast)
+requests.geocode(req.query.address, (err, geoLocation)=>{
+  if (err) return res.send({error: err});
+
+  requests.forecast(geoLocation, (err, forecast)=>{
+    if (err) return res.send({error: err});
+    res.send({forecast, address: req.query.address})
   });
-});
+
+  });
 });
 
 app.get('*', (req, res)=>{

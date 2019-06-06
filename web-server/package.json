@@ -1,13 +1,13 @@
 {
-  "name": "web-server",
+  "name": "Weather web-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A weather application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "web app", "server", "weather"],
+  "author": "Peter Iv. Yonkov",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
