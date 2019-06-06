@@ -3,7 +3,7 @@ This app uses async web requests to get your data and show it to you via the bro
 It will provide the simplest of UI so that you don't get confused... 
 
 ### Getting started for users
-Initially the app runs @ the terminal, but the final version will come with a nice url and everything. 
+The final version of the app comes with a nice url and everything you need to get your forecast. 
 So what you need to do is simply type in your address at the field provided and see the
 forecast for it. 
 <br>
@@ -25,10 +25,10 @@ DarkSky: https://darksky.net
 <br>
 MapBox: https://www.mapbox.com/
 <br> 
-If you see some API keys I left during development, just assume they are all invalid by the time you get to them.
+If you see some API keys I left during development commits, just assume they are all invalid by the time you get to them.
 <br>
 Once you get your API keys simply replace the mocked keys in the following snippets, 
-located at the requests.js file in the utils folder: 
+located at the ``requests.js`` file in the ``src`` folder: 
 ```
    const g_coding_config = {
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places',
@@ -45,3 +45,8 @@ located at the requests.js file in the utils folder:
 ```
 Naturally, do not forget to run the good old ``npm install`` command as you will 
 need some node modules to get it all working. 
+<br> 
+As of the latest commits one will see a much cleaner project structure as I did mess it up
+by error. Now you have the main directory alongside the ``public``, ``src``, and ``templates``
+directories, as well as the system generated files and the ``readme.md``. 
+
