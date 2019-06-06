@@ -3,7 +3,7 @@ body{color: #333333;font-family: Arial, sans-serif;}
 body{min-height: 100vh;}
 body{display: flex; flex-direction: column; align-items: center;}
 
-main {flex-grow: 1; max-width: 30vw;}
+main {flex-grow: 1; width: 30vw;}
 
 header{padding-top: 1em;}
 header a {text-decoration: none; color: #888888}
@@ -14,4 +14,8 @@ footer{color: #888888;}
 footer{margin-bottom: 1em;}
 
 h1, h2, h3 {text-align: center;}
-p, pre, form {margin-left: 1em;}
+p, pre, form {margin: 1em;}
+
+form  {display: flex; flex-direction: column}
+input {border: 1px solid #cccccc; padding: 0.3em; text-align: center; font-size: 1.25em;}
+button{cursor: pointer; border: 1px solid #888888;color: white; padding: 0.3em; font-size: 1.25em;}
