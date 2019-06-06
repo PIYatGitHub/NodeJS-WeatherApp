@@ -1,5 +1,5 @@
 'use strict';
-const url = 'http://localhost:3000/weather?address=';
+const url = '/weather?address=';
 let address = '';
 
 const weatherForm = document.getElementById('weatherSearch'),
