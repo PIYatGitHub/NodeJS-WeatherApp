@@ -1,7 +1,11 @@
+body{margin: 0; padding: 0;}
 body{color: #333333;font-family: Arial, sans-serif;}
+body{min-height: 100vh;}
 body{display: flex; flex-direction: column; align-items: center;}
 
-header{margin: 1em 0;}
+main {flex-grow: 1;}
+
+header{padding-top: 1em;}
 header a {text-decoration: none; color: #888888}
 header a {padding: 0 1em; cursor: pointer;}
 header a:hover{color: #333333; text-decoration: underline;}

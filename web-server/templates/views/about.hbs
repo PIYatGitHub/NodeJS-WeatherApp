@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="/css/coreStyles.css">
 </head>
 <body>
-{{>header}}
-<p>{{texts.[0]}}</p>
-<img src="/images/hardcore.png" alt="a very hard working man">
-{{>footer}}
+  {{>header}}
+  <main>
+    <h1>{{title}}</h1>
+    <p>{{texts.[0]}}</p>
+    <img src="/images/hardcore.png" alt="a very hard working man">
+  </main>
+  {{>footer}}
 </body>
 </html>
