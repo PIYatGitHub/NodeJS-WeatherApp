@@ -3,7 +3,7 @@ body{color: #333333;font-family: Arial, sans-serif;}
 body{min-height: 100vh;}
 body{display: flex; flex-direction: column; align-items: center;}
 
-main {flex-grow: 1;}
+main {flex-grow: 1; max-width: 30vw;}
 
 header{padding-top: 1em;}
 header a {text-decoration: none; color: #888888}
@@ -14,4 +14,4 @@ footer{color: #888888;}
 footer{margin-bottom: 1em;}
 
 h1, h2, h3 {text-align: center;}
-p, pre {margin-left: 1em;}
+p, pre, form {margin-left: 1em;}

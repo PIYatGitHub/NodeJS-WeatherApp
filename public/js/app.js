@@ -9,6 +9,7 @@ let   msg1=document.getElementById('msg-1'),
 
 weatherForm.addEventListener('submit',(e)=>{
   e.preventDefault();
+  msg1.textContent = 'Loading...';
   address = searchTerm.value;
   fetch(url+address).then((response)=>{
     response.json().then((data)=>{
