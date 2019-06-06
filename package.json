@@ -18,5 +18,8 @@
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "marked": "^0.6.2"
   }
 }

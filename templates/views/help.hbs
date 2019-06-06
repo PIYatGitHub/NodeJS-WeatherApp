@@ -6,12 +6,19 @@
   <title>Help</title>
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/coreStyles.css">
+  <link rel="stylesheet" href="/css/help.css">
 </head>
 <body>
   {{>header}}
   <main>
     <h1>{{title}}</h1>
     <p>{{texts.[0]}}</p>
+    <br>
+    <hr>
+    {{>help}}
+    <br>
+    <hr>
+    <p>{{texts.[1]}}</p>
   </main>
   {{>footer}}
 </body>

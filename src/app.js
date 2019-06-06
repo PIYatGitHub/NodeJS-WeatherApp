@@ -29,7 +29,7 @@ app.get('/help', (req, res)=>{
     title: 'Help is on the way!',
     texts: ['We are more than glad to help you out! Here are some FAQs, but ' +
     'should you struggle to find an answer, then by all means contact us' +
-    'with the form below!']
+    'with the form below!', 'Still confused? Drop us a line below...']
   })
 });
 
