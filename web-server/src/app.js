@@ -1,11 +1,11 @@
 'use strict';
 const express = require ('express');
 const path = require ('path');
-
 const app = express();
-app.set('view engine','hbs');
-app.set('views',path.join(__dirname, '../templates'));
-app.use(express.static(path.join(__dirname, '../public')));
+
+app.set('view engine','hbs');                               //setup for handlebars
+app.set('views',path.join(__dirname, '../templates'));      //setup for handlebars
+app.use(express.static(path.join(__dirname, '../public'))); //setup for static dir to serve!
 
 app.get('', (req, res)=>{
   res.render('index', {
@@ -13,6 +13,7 @@ app.get('', (req, res)=>{
     name: 'PIY'
   })
 });
+
 app.get('/about', (req, res)=>{
   res.render('about', {
     title: 'About us',
@@ -28,7 +29,6 @@ app.get('/help', (req, res)=>{
     'with the form below!']
   })
 });
-
 
 app.get('/weather', (req, res)=>{
   res.send('Your weather view...');
