@@ -40,7 +40,6 @@ app.get('*', (req, res)=>{
   res.render('404', {
     title: 'Oops... we failed to match this one!',
     subtitle: 'Our server returned a 404 status code of not found!',
-    reason: 'It appears you searched for a page we do not have. Care to visit the ',
     credit: 'Image credit: '
   })
 });
