@@ -5,10 +5,6 @@ const path = require ('path');
 const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('', (req, res)=>{
-  res.send('sth here... ');
-});
-
 app.get('/about', (req, res)=>{
   res.send('About us...');
 });
