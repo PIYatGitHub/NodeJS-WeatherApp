@@ -1,15 +1,24 @@
 'use strict';
+const url = 'http://localhost:3000/weather?address=';
+let address = '';
 
-const url = 'http://localhost:3000/weather?',
-address = 'address=Sofia,Bulgaria';
+const weatherForm = document.getElementById('weatherSearch'),
+      searchTerm = document.getElementById('searchTerm');
 
-fetch(url+address).then((response)=>{
-  response.json().then((data)=>{
-    if (data.error) {
-      console.log(data.error)
-    } else {
-      console.log(data)
-    }
+weatherForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  address = searchTerm.value;
 
+  fetch(url+address).then((response)=>{
+    response.json().then((data)=>{
+      if (data.error) {
+        console.log(data.error)
+      } else {
+        console.log(data)
+      }
+    });
   });
+
 });
+
+
