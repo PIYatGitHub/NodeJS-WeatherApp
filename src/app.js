@@ -4,6 +4,7 @@ const hbs = require ('hbs');
 const path = require ('path');
 const requests = require('./requests');
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine','hbs');                                       //setup for handlebars --> include it!
 app.set('views',path.join(__dirname, '../templates/views'));        //setup for handlebars --> set the views dir to be called templates!
@@ -56,4 +57,4 @@ app.get('*', (req, res)=>{
   })
 });
 
-app.listen(3000, ()=> console.log('started correctly on 3000!'));
+app.listen(port, ()=> console.log(`started correctly on ${port}!`));
