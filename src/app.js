@@ -19,8 +19,8 @@ app.get('', (req, res)=>{
 
 app.get('/about', (req, res)=>{
   res.render('about', {
-    title: 'About us',
-    texts: ['We are a small, but very busy weather app site. Hope you enjoy our service!']
+    title: 'About me',
+    texts: ['I am a very dedicated dev!']
   })
 });
 
