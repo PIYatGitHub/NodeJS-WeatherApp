@@ -1,5 +1,5 @@
 'use strict';
-const requests = require('./requests');
+const requests = require('./utils/requests');
 const address = process.argv[2];
 if(address) {
   requests.geocode(address, (err, geolocation) => {
