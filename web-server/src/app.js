@@ -1,9 +1,12 @@
 'use strict';
 const express = require ('express');
+const path = require ('path');
 
 const app = express();
+app.use(express.static(path.join(__dirname, '../public')));
+
 app.get('', (req, res)=>{
-  res.send('Welcome to the express thing');
+  res.send('sth here... ');
 });
 
 app.get('/about', (req, res)=>{
@@ -17,6 +20,5 @@ app.get('/help', (req, res)=>{
 app.get('/weather', (req, res)=>{
   res.send('Your weather view...');
 });
-
 
 app.listen(3000, ()=> console.log('started correctly on 3000!'));
