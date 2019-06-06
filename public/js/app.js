@@ -4,21 +4,20 @@ let address = '';
 
 const weatherForm = document.getElementById('weatherSearch'),
       searchTerm = document.getElementById('searchTerm');
+let   msg1=document.getElementById('msg-1'),
+      msg2=document.getElementById('msg-2');
 
 weatherForm.addEventListener('submit',(e)=>{
   e.preventDefault();
   address = searchTerm.value;
-
   fetch(url+address).then((response)=>{
     response.json().then((data)=>{
       if (data.error) {
-        console.log(data.error)
+        msg1.textContent = 'An error occurred:' + data.error;
       } else {
-        console.log(data)
+        msg1.textContent = 'Weather forecast:' + data.forecast;
+        msg2.textContent = data.address;
       }
     });
   });
-
 });
-
-

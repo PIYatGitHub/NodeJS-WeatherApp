@@ -32,7 +32,8 @@ const forecast = (data, cb) =>{
   request({url:dark_sky, json:true},(err, res)=>{
   if       (err)            cb('unable to connect to the weather service...', undefined);
   else if  (res.body.error) cb('apparently you did enter the wrong thing..., please check your input carefully', undefined);
-  else                      cb(undefined, `${res.body.daily.data[0].summary} It is currently ${res.body.currently.temperature} degrees outside with wind @ ${res.body.currently.windSpeed}km/h.`);
+  else                      cb(undefined, `${res.body.daily.data[0].summary} It is currently ${res.body.currently.temperature} degrees outside with wind @ ${res.body.currently.windSpeed}km/h.` +
+                            ` Humidity is: ${res.body.currently.humidity} and the pressure is: ${res.body.currently.pressure} hPa.`);
 });
 
 };

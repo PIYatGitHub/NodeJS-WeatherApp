@@ -42,7 +42,7 @@ requests.geocode(req.query.address, (err, geoLocation)=>{
 
   requests.forecast(geoLocation, (err, forecast)=>{
     if (err) return res.send({error: err});
-    res.send({forecast, address: req.query.address})
+    res.send({forecast, address: `longitude: ${geoLocation.longitude.toFixed(2)}, latitude: ${geoLocation.latitude.toFixed(2)}`})
   });
 
   });
