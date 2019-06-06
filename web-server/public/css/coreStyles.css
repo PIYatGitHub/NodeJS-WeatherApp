@@ -11,3 +11,5 @@ header a {padding: 0 1em; cursor: pointer;}
 header a:hover{color: #333333; text-decoration: underline;}
 
 footer{color: #888888; border-top: 1px solid #eeeeee;}
+
+h1, h2, h3 {text-align: center;}
