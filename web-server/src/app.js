@@ -2,6 +2,7 @@
 const express = require ('express');
 const hbs = require ('hbs');
 const path = require ('path');
+const requests = require('./requests');
 const app = express();
 
 app.set('view engine','hbs');                                       //setup for handlebars --> include it!
@@ -33,7 +34,17 @@ app.get('/help', (req, res)=>{
 });
 
 app.get('/weather', (req, res)=>{
-  res.send('Your weather view...');
+  if(!req.query.address){
+    return res.send({
+      error: 'No address provided!'
+    });
+  }
+requests.geocode(req.query.address, (err, geolocation)=>{
+  requests.forecast(geolocation, (err, forecast)=>{
+    if (err) return res.send(err);
+    res.send(forecast)
+  });
+});
 });
 
 app.get('*', (req, res)=>{
