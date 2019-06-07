@@ -1,0 +1,9 @@
+#course{
+  color: #333333;
+  padding-left: 1em;
+  text-decoration: none;
+}
+#course:hover{
+  color: #00803b;
+  text-decoration: underline;
+}

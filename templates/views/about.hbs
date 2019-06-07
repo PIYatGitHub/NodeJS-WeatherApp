@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1"/>
-  <title>About us</title>
+  <title>About</title>
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/coreStyles.css">
+  <link rel="stylesheet" href="/css/about.css">
 </head>
 <body>
   {{>header}}
   <main>
     <h1>{{title}}</h1>
     <p>{{texts.[0]}}</p>
-    <img src="/images/hardcore.png" alt="a very hard working man">
+    <p><b>{{texts.[1]}}</b></p>
+
+    <h2>{{headings.[0]}}</h2>
+    <p>{{texts.[2]}}</p>
+
+    <h2>{{headings.[1]}}</h2>
+    <p>{{texts.[3]}}</p> <a id="course" href={{texts.[4]}}>NodeJS mastery</a>
+    <p>{{texts.[5]}}</p>
+    <p><em>{{texts.[6]}}</em></p>
+    <p><b>{{texts.[7]}}</b></p>
   </main>
   {{>footer}}
 </body>
