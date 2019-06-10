@@ -3,7 +3,7 @@ const request = require('request');
 const geocode = (address, cb) => {
   const g_coding_config = {
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places',
-      params:`access_token=${'your-token-here'}&limit=1`
+      params:`access_token=${'pk.eyJ1Ijoic2V3Ym90IiwiYSI6ImNqd3E0bnJtZzA3MTI0YW9oY3QwZnVqajYifQ.UdYEXnuak6Z0e1YJm-PQNg'}&limit=1`
     },
     geo_coding = `${g_coding_config.baseUrl}/${address}.json?${g_coding_config.params}`;
   request({url:geo_coding, json:true},(err, res)=>{
@@ -23,7 +23,7 @@ const geocode = (address, cb) => {
 const forecast = (data, cb) =>{
   const d_sky_config = {
     baseUrl: 'https://api.darksky.net/forecast',
-    key: 'your-key-here',
+    key: '0a56986b15e9c436ac32753a861f9046',
     long: data.longitude,
     lat:  data.latitude,
     params:'units=si'
